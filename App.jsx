@@ -29,7 +29,6 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-
       <Routes>
         <Route
           path="/"
@@ -37,11 +36,9 @@ function App() {
             <>
               <Banner />
               <DisplayRow />
-            </>
-          }
+            </>  }
         />
       </Routes>
-
       <Footer />
     </BrowserRouter>
   );
