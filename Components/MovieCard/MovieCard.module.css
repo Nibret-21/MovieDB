@@ -1,319 +1,98 @@
-/* .cardWrapper{
-    position: relative;
-    width: 290px;
-    height: 198px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    overflow: visible;
-    z-index: 1;
-}
-.poster{
-    position: relative;
-    width: 227px;
-    height: 128px;
-    border-radius: 6px;
-    transition: transform 0.3s ease;
-    object-fit: cover;
-    z-index: 2;  
-}
-.hoverCard{
-position: absolute;
-top: 50px;
-left: 50%;
-transform: translateX(-50%)scale(0.95)  ;
-width: 320px;
-min-height: 305px;
-height: auto;
-background: #111;
-overflow: visible;
-box-shadow: 0px 20px 40px rgba(0,0,0,0.8);
-opacity: 0;
-visibility: hidden;
-transition:
- opacity 0.3s ease
- visibility 0.3s ease
- transform 0.3s ease;
- will-change: transform,opacity;
- backface-visibility: hidden;
- pointer-events: none;
- z-index: 999999;
-}
-.cardWrapper:hover.hoverCard{
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) scale(1);
-    pointer-events: auto;
-}
-.hoverCard:hover{
-      opacity: 1;
-    visibility: visible;
-    transform:  scale(1);
-    pointer-events: auto;
-}
-.hoverImage{
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-}
-.badge{
-    background: red;
-    color: white;
-    font-size: 12px;
-    padding: 2px 8px;
-    border-radius: 4px;
-    display: inline-block;
-    margin: 10px 0 0 12px;
-    font-weight: 500;
-}
-.buttonRow{
-    display: flex;
-    gap: 8px;
-    margin: 12px;
-    align-items: center;
-}
-.circleButton:hover{
-transform: scale(1.05);
-}
-.metaRow{
-    color: white;
-    display: flex;
-    gap: 10px;
-    margin: 8px 12px;
-    font-size: 14px;
-    font-weight: 500;
-}
-.circleButtonSmall{
-    border-radius: 50%;
-    background: rgba(34,34,34,0.8);
-    border: 1px solid #555;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    transition: 
-    background 0.2s ease
-    border-color  0.2s ease ;
-}
-.circleButtonSmall:hover{
-    background: #333;
-    border-color: #777;
-}
-.dot{
-    color: #888;
-    margin: 0 4px;
-}
-.geners{
-    color: #bbb;
-    font-size: 13px;
-    margin: 6px 12px 12px 12px;
-    line-height: 1.4;
-}
-.tag{
-    color: #ddd;
-} */
- /* .cardWrapper {
-    position: relative;
-    width: 290px;
-    height: 198px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    overflow: visible;
-    z-index: 1;
-}
-
-.poster {
-    position: relative;
-    width: 227px;
-    height: 128px;
-    border-radius: 6px;
-    transition: transform 0.3s ease;
-    object-fit: cover;
-    z-index: 2;
-}
-
-.hoverCard {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%) scale(0.95);
-    width: 320px;
-    min-height: 305px;
-    background: #111;
-    box-shadow: 0px 20px 40px rgba(0,0,0,0.8);
-    opacity: 0;
-    visibility: hidden;
-
-    transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease,
-        transform 0.3s ease;
-
-    pointer-events: none;
-    z-index: 9999;
-}
-
-.cardWrapper:hover .hoverCard {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) scale(1);
-    pointer-events: auto;
-}
-
-.hoverCard:hover {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.hoverImage {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
-}
-
-.genres {
-    color: #bbb;
-    font-size: 13px;
-    margin: 6px 12px 12px;
-}
-.tag{
-    color: #ddd;
-}  */
-.card {
+.cardWrapper {
   position: relative;
   width: 200px;
-  height: 300px;
-  border-radius: 8px;
-  overflow: hidden;
+  height: 120px;
+  margin: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-.card:hover {
-  transform: scale(1.15);
-  z-index: 10;
-}
-
-/* Poster */
 .poster {
   width: 100%;
   height: 100%;
+  border-radius: 6px;
   object-fit: cover;
 }
 
-/* Overlay */
-.overlay {
+/* Hover Card */
+.hoverCard {
   position: absolute;
-  inset: 0;
+  top: -100px;
+  left: 0;
+  width: 300px;
+  background: #141414;
+  border-radius: 10px;
+  overflow: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
-.show {
+/* SHOW ON HOVER */
+.cardWrapper:hover .hoverCard {
   opacity: 1;
+  transform: scale(1.2);
 }
 
-/* Gradient */
-.gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 30%,
-    rgba(0, 0, 0, 0.3) 60%,
-    transparent
-  );
+/* Banner */
+.hoverImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
-/* Content */
-.content {
-  position: absolute;
-  bottom: 0;
-  padding: 12px;
-  color: #fff;
-}
-
-/* Title */
-.title {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 8px;
+/* Badge */
+.badge {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  background: red;
+  padding: 4px 8px;
+  font-size: 10px;
+  border-radius: 4px;
+  color: white;
 }
 
 /* Buttons */
-.actions {
+.buttonRow {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 10px;
+  padding: 10px;
 }
 
-.playBtn {
-  width: 32px;
-  height: 32px;
+.playButton {
+  color: black;
+  background: white;
   border-radius: 50%;
-  background: #fff;
-  color: #000;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
 
-.iconBtn {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid #aaa;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.circleButton {
+  color: white;
 }
 
-.iconBtn:hover {
-  border-color: #fff;
+.circleButtonSmall {
+  margin-left: auto;
+  color: white;
 }
 
 /* Meta */
 .metaRow {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 6px;
-}
-
-.match {
-  color: #46d369;
+  padding: 0 10px;
   font-size: 12px;
-  font-weight: 600;
+  color: #ccc;
 }
 
 .tag {
-  font-size: 11px;
-  padding: 2px 6px;
-  border: 1px solid #aaa;
-  border-radius: 3px;
+  margin-right: 6px;
 }
 
 /* Genres */
 .genres {
+  padding: 5px 10px 10px;
   font-size: 11px;
-  color: #ccc;
+  color: #aaa;
 }
 
-.genres span::after {
-  content: " • ";
-}
-
-.genres span:last-child::after {
-  content: "";
+.dot {
+  margin: 0 4px;
 }
