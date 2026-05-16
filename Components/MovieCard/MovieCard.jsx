@@ -124,17 +124,17 @@ function MovieCard({ movie }) {
         <div className={styles.buttonRow}>
           <FaCirclePlay
             className={styles.circleButton}
-            color="white"
+            
             size={40}
           />
           <BsPlusCircle
             className={styles.circleButton}
-            color="white"
+           
             size={40}
           />
           <GoCheckCircleFill
             className={styles.circleButton}
-            color="white"
+           
             size={40}
           />
           <IoIosArrowDropdownCircle
